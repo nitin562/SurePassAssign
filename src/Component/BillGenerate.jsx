@@ -78,11 +78,14 @@ export default function BillGenerate() {
             if (e.total != "")
                 currPrice += Number.parseInt(e.total)
         })
+        
         let currTax = currPrice * (tax / 100)
+       
         let currFinal = currPrice + currTax
+        
         setsubTotal(currPrice)
-        settaxed(currTax)
-        setfinal(currFinal)
+        settaxed(currTax.toFixed(2))
+        setfinal(currFinal.toFixed(2))
     }
 
     const downloadInvoice = () => {
@@ -148,6 +151,10 @@ export default function BillGenerate() {
         setfinal(0)
         seterrors({})
     }
+    const contactValid=(inp)=>{
+        const sanitizedValue = inp.replace(/\D/g, "").slice(0, 10);
+        setcontact(sanitizedValue)
+    }
     return (
         <div className='flex-1 w-full flex flex-col bg-[#f9f7f7c8] p-3 px-8  scrollbar '>
             {show&&<ModalUtil title={"Saved Successfully"} content={modalContent()} show={show} setshow={setshow} custom={onCloseModal}/>}
@@ -166,16 +173,18 @@ export default function BillGenerate() {
                 />
                 <FormInput title="Contact"
                     write="Enter Number"
-                    type="tel"
+                    type="text"
                     width="md:max-w-[10rem] w-3/4"
                     state={contact}
-                    maxlength={10}
+                    
                     setstate={setcontact}
+                    changeFunc={contactValid}
                     ErrorTitle={errors?.Contact}
                     color='gray'
                     required={true}
 
                 />
+                
                 <FormInput title="Billing Date"
                     write="Enter Date"
                     type="date"
