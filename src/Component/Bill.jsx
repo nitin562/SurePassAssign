@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Nav from './Nav'
-import "/common.css?url"
+// import "/common.css?url"
 import SideNav from './SideNav'
 import { Route, Routes } from 'react-router-dom'
 import BillTable from './BillTable'

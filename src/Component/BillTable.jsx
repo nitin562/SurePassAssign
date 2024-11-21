@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import "/common.css?url"
+// import "/common.css?url"
 import { useSelector } from 'react-redux'
 import { Popover } from 'antd'
 import ModalUtil from '../utils/ModalUtil'
@@ -37,7 +37,7 @@ export default function BillTable() {
         </div>
     }
     return (
-        <div className='flex-1 w-full md:w-[calc(100%-20rem)] bg-[#f9f7f7c8] p-3 '>
+        <div className='flex-1 beforeTemplate w-full md:w-[calc(100%-20rem)] bg-[#f9f7f7c8] p-3 '>
             {modal?.show&&<ModalUtil title="View Information" content={modalContent(modal?.data)} show={modal?.show} setshow={setmodal}/>}
             <div className='flex items-center gap-4 text-mainBg font-bold font-Quicksand text-xl md:text-3xl mb-4'>Invoice Overview <div className='flex-1 h-1 bg-[#6701ff]'></div></div>
             <div className='overflow-x-auto border border-gray-300 rounded'>
