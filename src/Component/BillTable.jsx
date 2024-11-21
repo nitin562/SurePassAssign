@@ -8,10 +8,11 @@ export default function BillTable() {
     const bills = useSelector(state => state.Bill.bill)
     console.log(bills)
     const [modal, setmodal] = useState(false)
+  
     const PopoverContent = (data) => {
-        return <Tooltip title="More Info"><div className='cursor-pointer hover:text-green-500' onClick={() => showModal(data)}>
+        return <div className='cursor-pointer hover:text-green-500' onClick={() => showModal(data)}>
             <i className="fa-solid fa-circle-info"></i>
-        </div></Tooltip>
+        </div>
     }
     const showModal = (data) => {
         setmodal({ show: true, data })
