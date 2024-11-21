@@ -7,6 +7,10 @@ export default function FormInput({ title, write, type, width, state, setstate, 
       changeFunc(inputValue)
     }
     else {
+      if(type=="email"){
+        setstate(inputValue)
+        return
+      }
       inputValue = inputValue.replace(/[^a-zA-Z0-9.-]/g, ""); // Remove any non-alphanumeric character except minus and dot
 
       // Ensure minus sign is only at the beginning (if the number is negative)
