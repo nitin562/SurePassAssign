@@ -1,0 +1,17 @@
+/* Scrollbar design */
+.scrollbar {
+    overflow: hidden scroll;
+}
+.scrollbar::-webkit-scrollbar {
+  width: 0.3rem;
+}
+.scrollbar::-webkit-scrollbar-track {
+  width: 0.1rem;
+  background-color: rgb(236, 245, 245);
+  border-radius: 3rem;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  width: 0.05rem;
+  background-color: #000201;
+  border-radius: 2.5rem;
+}
