@@ -8,7 +8,7 @@ import BillGenerate from './BillGenerate'
 export default function Bill() {
   const [toggle, settoggle] = useState(true)
   return (
-    <div className='w-screen h-screen flex flex-col before:opacity-80 bg-white '>
+    <div className='w-screen h-screen flex flex-col overflow-hidden before:opacity-80 bg-white '>
       <Nav changeToogle={settoggle}/>
       <div className='h-[calc(100%-4rem)] scrollbar flex'>
         <SideNav show={toggle} setshow={settoggle}/>
