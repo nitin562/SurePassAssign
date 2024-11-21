@@ -212,7 +212,7 @@ export default function BillGenerate() {
                         return <ItemField unique={e.key} idx={i} key={e.key} errors={errors} setitems={setitems} />
                     })
                 }
-                <div className='flex justify-between w-full'>
+                <div className='flex justify-between my-2 w-full'>
 
                     <button onClick={() => setitems(items => { return [...items, { key: uuidv4() }] })} className='flex text-white rounded-lg mx-auto font-Quicksand bg-[#2657f9] w-fit p-2 gap-2 group items-center justify-center'><i className='fa-solid fa-plus text-lightBg transition-all duration-300  group-hover:bg-mainBg group-hover:text-white p-2 rounded-xl bg-white border-[1px]'></i>Add A Field</button>
                 </div>

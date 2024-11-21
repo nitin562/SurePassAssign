@@ -11,7 +11,7 @@ export default function Bill() {
     <div className='w-screen h-screen flex flex-col before:opacity-80 bg-white '>
       <Nav changeToogle={settoggle}/>
       <div className='h-[calc(100%-4rem)] scrollbar flex'>
-        <SideNav show={toggle}/>
+        <SideNav show={toggle} setshow={settoggle}/>
         <Routes>
           <Route path="/" element={<BillTable/>}/>
           <Route path="/gen" element={<BillGenerate/>}/>
