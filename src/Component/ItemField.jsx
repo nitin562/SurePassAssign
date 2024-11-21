@@ -41,7 +41,7 @@ export default function ItemField({unique, idx, setitems, errors }) {
     }
     return (
         <Popover content={popContent} placement='topRight'>
-            <div className='flex flex-wrap justify-center gap-3 py-1 hover:bg-[#ece9ff] border-r-[2px] border-r-transparent duration-300 transition-all hover:border-mainBg cursor-pointer w-full'>
+            <div className='flex flex-wrap border-b-[1px] border-lightBg/20 justify-center gap-3 py-1 hover:bg-[#ece9ff] border-r-[2px] my-1 border-r-transparent duration-300 transition-all hover:border-mainBg cursor-pointer w-full'>
                 <FormInput title="Item"
                     write="Enter Item Detail"
                     type="text"
